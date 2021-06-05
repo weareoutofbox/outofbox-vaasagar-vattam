@@ -273,11 +273,14 @@ class Header extends React.Component {
                         //   // this.props.setLoader(true);
                         //   this.props.history.push("/review/vaasagar");
                         // }}
-                        onClick={this.hideNav}
+
                         className=''
                         active={window.location.pathname === "/"}
                         exact
-                        onClick={this.scrollTop}
+                        onClick={() => {
+                          this.scrollTop();
+                          this.hideNav();
+                        }}
                         to='/'
                         activeClassName='active'
                         className='nav-links'>
@@ -296,10 +299,13 @@ class Header extends React.Component {
                         //   // this.props.setLoader(true);
                         //   this.props.history.push("/review/vaasagar/category");
                         // }}
-                        onClick={this.hideNav}
+
                         exact
                         to='/category'
-                        onClick={this.scrollTop}
+                        onClick={() => {
+                          this.scrollTop();
+                          this.hideNav();
+                        }}
                         activeClassName='active'
                         className='nav-links'>
                         Categories
@@ -312,9 +318,11 @@ class Header extends React.Component {
                       {" "}
                       <NavLink
                         exact
-                        onClick={this.hideNav}
                         to='/popular-books'
-                        onClick={this.scrollTop}
+                        onClick={() => {
+                          this.scrollTop();
+                          this.hideNav();
+                        }}
                         activeClassName='active'
                         className='nav-links'>
                         Popular Books
@@ -327,9 +335,11 @@ class Header extends React.Component {
                       {" "}
                       <NavLink
                         exact
-                        onClick={this.hideNav}
                         to='/popular-book-sets'
-                        onClick={this.scrollTop}
+                        onClick={() => {
+                          this.scrollTop();
+                          this.hideNav();
+                        }}
                         activeClassName='active'
                         className='nav-links'>
                         Popular Book Sets
@@ -342,7 +352,7 @@ class Header extends React.Component {
                       {" "}
                       <NavLink
                         exact
-                        onClick={this.hideNav}
+                        // onClick={this.hideNav}
                         to='/readers-club/review'
                         isActive={this.onPaths([
                           "/readers-club/review",
@@ -357,7 +367,10 @@ class Header extends React.Component {
                           window.location.pathname === "/readers-club/event"
                         }
                         // activeClassName='active'
-                        onClick={this.scrollTop}
+                        onClick={() => {
+                          this.scrollTop();
+                          this.hideNav();
+                        }}
                         className='nav-links'>
                         Reader's Club
                       </NavLink>

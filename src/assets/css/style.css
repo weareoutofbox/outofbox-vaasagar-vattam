@@ -690,7 +690,7 @@ line-height: 19px;
   }
   .footerCategoriesDesc  .load-more{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 5px;
   }
   .copyright p{

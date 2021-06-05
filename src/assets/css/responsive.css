@@ -564,6 +564,15 @@ caret-color: #FB8961;
     transition: all 1s ease;
     
 }
+.btn-class.active::-webkit-scrollbar{
+    width: 4px;
+}
+.btn-class.active::-webkit-scrollbar-track-piece{
+    width: 4px;
+}
+.btn-class.active::-webkit-scrollbar-thumb:vertical{
+    background: #FAC9B8;
+}
 .btn-class.active{
     display: block;
     /* display: block;
@@ -602,9 +611,18 @@ caret-color: #FB8961;
     background: #FAC9B8;
     padding-top: 24px;
     align-items: flex-start;
+    box-sizing: border-box;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    position: fixed;
+    width: 100%;
     padding: 20px 19px;
+    z-index: 9999;
     /* margin-top: 30px; */
     border-bottom: 1px solid gray;
+  }
+  .mob-custom-container .filterBlk{
+      margin-top: 53px;
   }
   .mobFilterView p{
     font-size: 16px;
@@ -900,9 +918,9 @@ color: #404040;
         left: 70%;
         bottom: 13%;
     }
-    /* .myAccountWrap .ReadersTab{
-        gap: 35px;
-    } */
+    .myAccountWrap .ReadersTab{
+        gap: 0px;
+    }
     .myAccountWrap .row{
         align-items: flex-start;
     }
@@ -1480,7 +1498,7 @@ color: #404040;
             display: flex;
             grid-gap: 40px;
             padding-left: 40px;
-            gap: 40px;
+            gap: 0px;
         }
         .ReadersTab{
             justify-content: unset;
@@ -1491,7 +1509,7 @@ color: #404040;
         .ratingsWrap, .productSec1{
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: baseline;
         }
         .n-pbWrap{
             justify-content: center;
