@@ -162,20 +162,24 @@ function EventBlkNav() {
                           Offers
                         </button>
                       </Link>
-                      <button
-                        className={
-                          toggleState === 4 ? "tabs active-tabs" : "tabs"
-                        }
-                        onClick={() => toggleTab(4)}>
-                        Points
-                      </button>
-                      <button
-                        className={
-                          toggleState === 5 ? "tabs active-tabs" : "tabs"
-                        }
-                        onClick={() => toggleTab(5)}>
-                        Polls
-                      </button>
+                      <Link to='/readers-club/points'>
+                        <button
+                          className={
+                            toggleState === 4 ? "tabs active-tabs" : "tabs"
+                          }
+                          onClick={() => toggleTab(4)}>
+                          Points
+                        </button>
+                      </Link>
+                      <Link to='/readers-club/polls'>
+                        <button
+                          className={
+                            toggleState === 5 ? "tabs active-tabs" : "tabs"
+                          }
+                          onClick={() => toggleTab(5)}>
+                          Polls
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
