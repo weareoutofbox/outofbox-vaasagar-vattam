@@ -229,9 +229,9 @@ body {
     margin: 15px auto;
     color: #d4d4d4;
 }
-.nav-links.active .cartActive{
-  background: #383838;
-  padding: 7px;
+.nav-links.active.cartActive{
+  background-color: #FAC9B8;
+  padding: 5px 8px 3px 5px;
   border-radius: 50%;
   display: block;
 }

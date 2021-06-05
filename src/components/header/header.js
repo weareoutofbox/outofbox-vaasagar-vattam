@@ -103,14 +103,14 @@ class Header extends React.Component {
                 </div>
                 <div className='headerRightBlkWrap'>
                   <div className='headerRightBlk'>
-                    <Link
+                    <NavLink
                       exact
                       to='/cart'
-                      activeClassName='active'
+                      activeClassName='active cartActive'
                       className='nav-links'
                       onClick={this.scrollTop}>
-                      <img src={cartDesk} alt='cart' className='cartActive' />
-                    </Link>
+                      <img src={cartDesk} alt='cart' className='' />
+                    </NavLink>
                     <Link
                       exact
                       to='/login'
@@ -225,14 +225,14 @@ class Header extends React.Component {
 
                 <li className='mob'>
                   <div className='headerRightBlk'>
-                    <Link
+                    <NavLink
                       exact
                       to='/cart'
-                      activeClassName='active'
                       onClick={this.scrollTop}
+                      activeClassName='active cartActive'
                       className='nav-links'>
-                      <img src={cart} alt='cart' className='cartActive' />
-                    </Link>
+                      <img src={cartDesk} alt='cart' />
+                    </NavLink>
                     <button className='headerSignIn'>Sign In</button>
                   </div>
                 </li>
@@ -340,28 +340,27 @@ class Header extends React.Component {
                   <a>
                     <li>
                       {" "}
-                        <NavLink
-                      exact
-                      onClick={this.hideNav}
-                      to='/readers-club/review'
-                      isActive={this.onPaths([
-                        "/readers-club/review",
-                        "/readers-club/event",
-                        "/readers-club/polls",
-                        "/readers-club/points",
-                        "/readers-club/offer",
-                      ])}
-
-                      active={
-                        window.location.pathname === "/readers-club/review" ||
-                        window.location.pathname === "/readers-club/offer" ||
-                        window.location.pathname === "/readers-club/event"
-                      }
-                      // activeClassName='active'
-                      onClick={this.scrollTop}
-                      className='nav-links'>
-                      Reader's Club
-                    </NavLink>
+                      <NavLink
+                        exact
+                        onClick={this.hideNav}
+                        to='/readers-club/review'
+                        isActive={this.onPaths([
+                          "/readers-club/review",
+                          "/readers-club/event",
+                          "/readers-club/polls",
+                          "/readers-club/points",
+                          "/readers-club/offer",
+                        ])}
+                        active={
+                          window.location.pathname === "/readers-club/review" ||
+                          window.location.pathname === "/readers-club/offer" ||
+                          window.location.pathname === "/readers-club/event"
+                        }
+                        // activeClassName='active'
+                        onClick={this.scrollTop}
+                        className='nav-links'>
+                        Reader's Club
+                      </NavLink>
                       {/* <NavLink
                         exact
                         onClick={this.hideNav}
